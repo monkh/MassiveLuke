@@ -1,0 +1,19 @@
+﻿
+.profile-picture {
+    height: 50%;
+    border-radius: 50%;
+    border: 10px solid;
+    margin-top: 0px;
+}
+.profile-picture-container {
+    height: 50vh;
+}
+.background-header {
+    position: absolute;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+@media screen and (min-width: 1400px) {
+    .background-header {
+        width: 100vw;
+    }
+}
