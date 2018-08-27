@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="src\app.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="node_modules\ansi-styles\package.json" />
     <Content Include="node_modules\argparse\package.json" />
     <Content Include="node_modules\babel-code-frame\node_modules\ansi-regex\package.json" />
@@ -1028,13 +1024,11 @@
     <TypeScriptCompile Include="node_modules\typescript\lib\tsserverlibrary.d.ts" />
     <TypeScriptCompile Include="node_modules\typescript\lib\typescript.d.ts" />
     <TypeScriptCompile Include="node_modules\typescript\lib\typescriptServices.d.ts" />
-    <TypeScriptCompile Include="src\app.ts" />
     <TypeScriptCompile Include="wwwroot\js\site.ts" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <Folder Include="dist\" />
     <Folder Include="node_modules\.cache\uglifyjs-webpack-plugin\tmp\" />
     <Folder Include="wwwroot\images\Auger\" />
   </ItemGroup>

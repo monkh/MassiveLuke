@@ -1,9 +1,13 @@
+const path = require('path');
+const DESTINATION = path.resolve(__dirname, '/wwwroot/js/');
+
 module.exports = {
     mode: "development",
     devtool: "inline-source-map",
     entry: "./wwwroot/js/site.ts",
     output: {
-        filename: "bundle.js"
+        filename: "bundle.js",
+        path: DESTINATION
     },
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
