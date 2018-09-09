@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.Webpack</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.Webpack.NodeToolRunner`1">
+            <summary>
+            Base Node Tool Runner
+            </summary>
+            <typeparam name="TSettings">tool settings</typeparam>
+        </member>
+        <member name="M:Cake.Webpack.NodeToolRunner`1.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator)">
+            <summary>
+            
+            </summary>
+            <param name="fileSystem">the file system</param>
+            <param name="environment">the cake environment</param>
+            <param name="processRunner">the process runner</param>
+            <param name="tools">the tools locator</param>
+        </member>
+        <member name="M:Cake.Webpack.NodeToolRunner`1.GetToolExecutableNames">
+            <summary>
+            Gets the possible names of the tool executable.
+            </summary>
+            <returns>
+            The tool executable name.
+            </returns>
+        </member>
+        <member name="M:Cake.Webpack.NodeToolRunner`1.FromPath(Cake.Core.IO.DirectoryPath)">
+            <summary>
+            Sets the working directory for npm commands
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cake.Webpack.NodeToolRunner`1.GetWorkingDirectory(`0)">
+            <summary>
+            Gets the working directory from the NpmRunnerSettings
+                        Defaults to the currently set working directory.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns>
+            The working directory for the tool.
+            </returns>
+        </member>
+        <member name="T:Cake.Webpack.NamespaceDoc">
+            <summary>
+            This namespace contain types used for operations using the Npm tool wrapper
+            </summary>
+        </member>
+        <member name="T:Cake.Webpack.WebpackLocalRunner">
+            <summary>
+            Webpack runner for local node installation
+            </summary>
+        </member>
+        <member name="M:Cake.Webpack.WebpackLocalRunner.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator)">
+            <summary>
+            Webpack runner for local node installation
+            </summary>
+            <param name="fileSystem">the file system</param>
+            <param name="environment">the cake environment</param>
+            <param name="processRunner">the process runner</param>
+            <param name="tools">the tools locator</param>
+        </member>
+        <member name="M:Cake.Webpack.WebpackLocalRunner.Execute(System.Action{Cake.Webpack.WebpackLocalRunnerSettings})">
+            <summary>
+            Executes Webpack
+            </summary>
+        </member>
+        <member name="T:Cake.Webpack.WebpackLocalRunnerSettings">
+            <summary>
+            Webpack settings specific to local webpack execution
+            </summary>
+        </member>
+        <member name="M:Cake.Webpack.WebpackLocalRunnerSettings.#ctor">
+            <summary>
+            Webpack settings specific to local webpack execution
+            </summary>
+        </member>
+        <member name="P:Cake.Webpack.WebpackLocalRunnerSettings.PathToWebpackJs">
+            <summary>
+            Path to local webpack installation
+            </summary>
+        </member>
+        <member name="M:Cake.Webpack.WebpackLocalRunnerSettings.SetPathToWebpackJs(Cake.Core.IO.FilePath)">
+            <summary>
+            Sets the location of local webpack node installation
+            </summary>
+            <param name="webpackJs">Path to local webpack installation</param>
+            <returns></returns>
+            <exception cref="T:System.IO.FileNotFoundException">when path not found</exception>
+        </member>
+        <member name="T:Cake.Webpack.WebpackRunner`1">
+            <summary>
+            Base Webpack runner
+            </summary>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunner`1.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator)">
+            <summary>
+            creates a new Webpack runner
+            </summary>
+            <param name="fileSystem">the file system</param>
+            <param name="environment">The cake environment</param>
+            <param name="processRunner">The cake process runner</param>
+            <param name="tools">The tools locator</param>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunner`1.GetToolName">
+            <summary>
+            Gets the name of the tool.
+            </summary>
+            <returns>
+            The name of the tool.
+            </returns>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunner`1.Execute(System.Action{`0})">
+            <summary>
+            Executes Webpack
+            </summary>
+        </member>
+        <member name="T:Cake.Webpack.WebpackBuildMode">
+            <summary>
+            Specifies whether to apply the -d or -p switches
+            </summary>
+        </member>
+        <member name="F:Cake.Webpack.WebpackBuildMode.Development">
+            <summary>
+            -d
+            </summary>
+        </member>
+        <member name="F:Cake.Webpack.WebpackBuildMode.Production">
+            <summary>
+            -p
+            </summary>
+        </member>
+        <member name="T:Cake.Webpack.WebpackGlobalRunner">
+            <summary>
+            webpack runner foir global node installation
+            </summary>
+        </member>
+        <member name="M:Cake.Webpack.WebpackGlobalRunner.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator)">
+            <summary>
+            
+            </summary>
+            <param name="fileSystem">the filesystem</param>
+            <param name="environment">the environment</param>
+            <param name="processRunner">the process runner</param>
+            <param name="tools">the tools locator</param>
+        </member>
+        <member name="M:Cake.Webpack.WebpackGlobalRunner.Execute(System.Action{Cake.Webpack.WebpackRunnerSettings})">
+            <summary>
+            Executes Webpack
+            </summary>
+        </member>
+        <member name="M:Cake.Webpack.WebpackGlobalRunner.GetToolExecutableNames">
+            <summary>
+            Gets the possible names of the tool executable.
+            </summary>
+            <returns>
+            The tool executable name.
+            </returns>
+        </member>
+        <member name="T:Cake.Webpack.WebpackRunnerAliases">
+            <summary>
+            Provides a wrapper around Webpack functionality within a Cake build script
+            </summary>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunnerAliases.Webpack(Cake.Core.ICakeContext)">
+            <summary>
+            Webpack alias
+            </summary>
+            <example>
+            <para>Cake task:</para>
+            <code>
+            <![CDATA[
+            Task("Webpack")
+            .Does(() =>
+            {
+                Webpack.Global();
+                Webpack.FromPath(".").Global();
+                Webpack.Global(s => s.WithBuildMode(WebpackBuildMode.Production));
+                Webpack.Global(s => s.OutputAsJson());
+                Webpack.Global(s => s.WithArguments("in.js out.js --verbose"));
+            
+                Webpack.Local();
+                Webpack.FromPath(".").Local();
+                Webpack.Local(s => s.SetPathToWebpackJs("some-other-directory/node_modules/webpack.bin.webpack.js"));        
+                Webpack.Local(s => s.WithBuildMode(WebpackBuildMode.Production));
+                Webpack.Local(s => s.OutputAsJson());
+                Webpack.Local(s => s.WithArguments("in.js out.js --verbose"));        
+            });
+            ]]>
+            </code>
+            </example>
+            <param name="context">the cake context</param>
+            <returns>webpack runner options</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Cake.Webpack.WebpackRunnerFactory">
+            <summary>
+            Returns a Webpack runner based on either a local or global Webpack installation via npm
+            </summary>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunnerFactory.FromPath(Cake.Core.IO.DirectoryPath)">
+            <summary>
+            Sets the working directory when webpack is executed
+            </summary>
+            <param name="workingDirectoryPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunnerFactory.Local(System.Action{Cake.Webpack.WebpackLocalRunnerSettings})">
+            <summary>
+            Get a Webpack local runner based on a local Webpack installation, a local installation is achieved through `npm install Webpack`
+            </summary>
+            <param name="configure"></param>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunnerFactory.Global(System.Action{Cake.Webpack.WebpackRunnerSettings})">
+            <summary>
+            Get a Webpack global runner based on a global Webpack installation, a global installation is achieved through `npm install Webpack -g`
+            </summary>
+            <param name="configure"></param>
+        </member>
+        <member name="T:Cake.Webpack.WebpackRunnerSettings">
+            <summary>
+            Webpack settings
+            </summary>
+        </member>
+        <member name="F:Cake.Webpack.WebpackRunnerSettings.FileSystem">
+            <summary>
+            The file system
+            </summary>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunnerSettings.#ctor">
+            <summary>
+            Create a new instance of the <see cref="T:Cake.Webpack.WebpackRunnerSettings"/> class.
+            </summary>
+        </member>
+        <member name="P:Cake.Webpack.WebpackRunnerSettings.ConfigFile">
+            <summary>
+            The config file to run
+            </summary>
+        </member>
+        <member name="P:Cake.Webpack.WebpackRunnerSettings.OutputJson">
+            <summary>
+            specifies the --json switch
+            </summary>
+        </member>
+        <member name="P:Cake.Webpack.WebpackRunnerSettings.BuildMode">
+            <summary>
+            specifies the build mode
+            </summary>
+        </member>
+        <member name="P:Cake.Webpack.WebpackRunnerSettings.Arguments">
+            <summary>
+            Argument string to pass to Webpack
+            </summary>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunnerSettings.FromConfig(Cake.Core.IO.FilePath)">
+            <summary>
+            The Webpackfile to use
+            </summary>
+            <param name="configFile">path to webpack config file</param>
+            <returns>the settings</returns>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunnerSettings.OutputAsJson(System.Boolean)">
+            <summary>
+            Whether to append the --json switch
+            </summary>
+            <param name="enable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunnerSettings.WithBuildMode(Cake.Webpack.WebpackBuildMode)">
+            <summary>
+            Whether to specifies either -d or -p switch
+            </summary>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunnerSettings.WithArguments(System.String)">
+            <summary>
+            The argument string to pass to Webpack
+            </summary>
+            <param name="arguments">an argument string</param>
+            <returns>the settings</returns>
+        </member>
+        <member name="M:Cake.Webpack.WebpackRunnerSettings.EvaluateCore(Cake.Core.IO.ProcessArgumentBuilder)">
+            <summary>
+            evaluate options
+            </summary>
+            <param name="args"></param>
+        </member>
+    </members>
+</doc>

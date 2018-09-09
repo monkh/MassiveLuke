@@ -1,6 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+
+<img class="background-header" src="~/images/background_header.jpg" />
+
 <!-- Intro -->
 <div id="intro">
     <div class="profile-picture-container">
@@ -13,22 +16,19 @@
     <p>
         A full stack .NET Developer, Tech enthusiast, gamer and all round computer nerd, from the Wirral, United Kingdom.
     </p>
-    <ul class="actions">
-        <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-    </ul>
 </div>
 
 <!-- Header -->
 <header id="header">
-    <a href="index.html" class="logo">This is Luke</a>
+    <a href="/" class="logo">This is Luke</a>
 </header>
 
 <!-- Nav -->
 <nav id="nav">
     <ul class="links">
-        <li class="active"><a href="/">Projects</a></li>
-        <li><a href="generic.html">About</a></li>
-        <li><a href="elements.html">Skills</a></li>
+        <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">Projects</a></li>
+        <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+        <li><a asp-area="" asp-controller="Home" asp-action="Skills">Skills</a></li>
     </ul>
     <ul class="icons">
         <li><a href="https://www.linkedin.com/in/lukevarley/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
@@ -57,8 +57,10 @@
             </p>
         </header>
         <ul class="actions fit">
-            <li><button href="" id="auger-example1" class="button special fit">Example 1 Feature</button></li>
-            <li><a href="#" class="button fit">Fit</a></li>
+            <li>
+                <button id="auger-example1" class="ui black button fit">Example 1 Feature</button>
+                <button id="auger-example1" class="ui black button fit">Example 2 Feature</button>
+            </li>
         </ul>
     </article>
 
@@ -228,8 +230,27 @@
     </section>
 </footer>
 
-<!-- Copyright -->
-<div id="copyright">
-    <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-</div>
 
+
+
+<!-- Modals -->
+
+<div class="ui modal">
+    <div class="header">Header</div>
+    <div class="content">
+        <p>Testing</p>
+    </div>
+    <div class="actions">
+        <div class="ui left floated labeled button" tabindex="0">
+            <div class="ui red button">
+                <i class="heart icon"></i> Like
+            </div>
+            <a class="ui basic red label">
+                2,048
+            </a>
+        </div>
+        <div class="ui buttons">
+            <button class="ui right floated cancel black button">Close</button>
+        </div>
+    </div>
+</div>

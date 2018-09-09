@@ -3,10 +3,8 @@
     "outDir": "./wwwroot/js/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5"
-  },
-  "include": [
-    // path to your files... like src/*
-  ]
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": true
+  }
 }

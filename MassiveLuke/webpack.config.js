@@ -1,12 +1,12 @@
 const path = require('path');
-const DESTINATION = path.resolve(__dirname, '/wwwroot/js/');
+const DESTINATION = path.resolve(__dirname, './wwwroot/js/');
 
 module.exports = {
     mode: "development",
     devtool: "inline-source-map",
     entry: "./wwwroot/js/site.ts",
     output: {
-        filename: "bundle.js",
+        filename: "site.js",
         path: DESTINATION
     },
     resolve: {
@@ -15,16 +15,11 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.js$/, // include .js files
+            test: /\.ts$/, // include .js files
             enforce: "pre", // preload the jshint loader
             exclude: /node_modules/, // exclude any and all files in the node_modules folder
             use: [{
-                loader: "ts-loader",
-                options: {
-                    camelcase: true,
-                    emitErrors: false,
-                    failOnHint: false
-                }
+                loader: "ts-loader"
             }]
         }]
     }
